@@ -61,7 +61,7 @@
     const root = $('public-root');
     root.innerHTML = neutral('<div class="text-center py-6"><div class="spinner my-4"></div></div>');
     DB.from('tenders_public')
-      .select('id, reference, opening_date')
+      .select('id, reference, opening_date, secure_link')
       .then(({ data, error }) => {
         if (error) {
           console.error(error);
@@ -71,7 +71,7 @@
           );
           return;
         }
-        const matches = (data || []).filter((r) => (r.reference || '').replace(/\D/g, '') === code);
+        const matches = (data || []).filter((r) => !r.secure_link && (r.reference || '').replace(/\D/g, '') === code);
         if (!matches.length) {
           window.DownloadPage.init('__invalid__');
           return;
