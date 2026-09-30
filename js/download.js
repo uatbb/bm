@@ -4,6 +4,15 @@
   const t = (k, v) => I18N.t(k, v);
   const kindName = (k) => (k === 'tender' ? t('kind_tender_s') : t('kind_consultation_s'));
 
+  // شارة الكلية (من بيانات العرض العام tenders_public)
+  function facultyChip() {
+    if (!tender || !tender.faculty_name) return '';
+    const name = I18N.lang === 'ar' ? tender.faculty_name : (tender.faculty_name_fr || tender.faculty_name);
+    const c = tender.faculty_color || '#475569';
+    return '<span class="text-[10px] font-bold px-2 py-0.5 rounded whitespace-nowrap" style="background:' + c + '1a;color:' + c + '">' +
+      (tender.faculty_icon || '🎓') + ' ' + esc(name) + '</span>';
+  }
+
   let token = null;
   let tender = null;
   let signed = { url: '', expiresAt: 0, updated: false };
@@ -14,6 +23,7 @@
   let lastErr = null;
   let lastErrRetry = false;
   let langBound = false;
+  let timeOffset = 0; // فرق وقت الخادم عن ساعة الجهاز (ملّي ثانية)
 
   const $ = (id) => document.getElementById(id);
   const val = (id) => ($(id) ? $(id).value : '');
@@ -249,6 +259,7 @@
       '<div class="flex items-center justify-center gap-2 flex-wrap mb-1.5">' +
       '<span class="font-black text-slate-900" dir="auto">' + esc(tender.reference) + '</span>' +
       '<span class="text-[10px] font-bold px-2 py-0.5 rounded ' + (tender.kind === 'tender' ? 'bg-indigo-50 text-indigo-700' : 'bg-primary-50 text-primary-700') + '">' + kindName(tender.kind) + '</span>' +
+      facultyChip() +
       '</div>' +
       '<p class="text-sm text-slate-600 leading-relaxed mb-4">' + esc(tender.title) + '</p>' +
       '<div class="bg-gradient-to-l from-emerald-700 to-emerald-500 text-white rounded-2xl p-4 mb-4 shadow-md">' +
@@ -291,6 +302,7 @@
       '<div class="flex items-center gap-2 flex-wrap">' +
       '<span class="font-black text-slate-900 text-lg" dir="auto">' + esc(tender.reference) + '</span>' +
       '<span class="text-[10px] font-bold px-2 py-0.5 rounded ' + (tender.kind === 'tender' ? 'bg-indigo-50 text-indigo-700' : 'bg-primary-50 text-primary-700') + '">' + kindName(tender.kind) + '</span>' +
+      facultyChip() +
       '<span class="text-[10px] font-bold text-primary-700 bg-primary-50 border border-primary-200 rounded-full px-2 py-0.5">' + t('p_published') + '</span>' +
       '</div>' +
       '<p class="text-sm text-slate-600 leading-relaxed mt-1">' + esc(tender.title) + '</p>' +
