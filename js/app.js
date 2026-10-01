@@ -29,7 +29,7 @@
       '<div class="relative flex flex-col items-center text-center">' +
       '<img src="img/logo.png" alt="" class="h-16 w-16 object-contain mb-3 bg-white rounded-2xl p-2 shadow-lg">' +
       '<h1 class="text-base sm:text-lg font-black leading-snug">' + t('univ') + '</h1>' +
-      '<p class="text-[11px] text-teal-100 mt-1.5 font-semibold">' + t('p_download_sub') + '</p>' +
+      '<p class="text-[11px] text-primary-100 mt-1.5 font-semibold">' + t('p_download_sub') + '</p>' +
       '</div>' +
       '</div>' +
       '<div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-5 sm:p-6 text-start -mt-7 relative z-20">' + inner + '</div>' +

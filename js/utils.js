@@ -71,7 +71,7 @@
     if (!box) return;
     const el = document.createElement('div');
     const styles = {
-      success: 'bg-teal-700 text-white',
+      success: 'bg-primary-700 text-white',
       error: 'bg-red-600 text-white',
       info: 'bg-slate-800 text-white',
       warn: 'bg-amber-500 text-white',
@@ -145,7 +145,7 @@
   window.statusBadge = function (s) {
     const t = window.I18N ? I18N.t : (k) => k;
     const map = {
-      published: [t('st_published'), 'bg-teal-50 text-teal-700 border-teal-200'],
+      published: [t('st_published'), 'bg-primary-50 text-primary-700 border-primary-200'],
       opened: [t('st_opened'), 'bg-slate-100 text-slate-500 border-slate-200'],
     };
     const item = map[s] || [s, 'bg-slate-100 text-slate-500 border-slate-200'];
