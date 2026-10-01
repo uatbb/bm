@@ -22,7 +22,7 @@
   function neutral(inner) {
     return (
       '<div>' +
-      '<div class="bg-gradient-to-b from-primary-800 via-primary-700 to-primary-800 text-white px-5 pt-4 pb-12 rounded-b-3xl shadow-md relative z-10 overflow-hidden">' +
+      '<div class="bg-gradient-to-br from-emerald-600 via-teal-500 to-emerald-700 text-white px-5 pt-4 pb-12 rounded-b-3xl shadow-md relative z-10 overflow-hidden">' +
       '<div class="absolute -top-12 -left-12 w-44 h-44 rounded-full bg-white/5 pointer-events-none"></div>' +
       '<div class="absolute -bottom-24 -right-12 w-64 h-64 rounded-full bg-white/5 pointer-events-none"></div>' +
       '<div class="relative">' + neutralHeader() + '</div>' +
