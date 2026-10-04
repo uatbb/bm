@@ -257,7 +257,7 @@
       iconCircle('📬', 'bg-emerald-50') +
       '<h2 class="font-black text-emerald-800 text-lg mb-2">' + t('opened_t') + '</h2>' +
       '<div class="flex items-center justify-center gap-2 flex-wrap mb-1.5">' +
-      '<span class="font-black text-slate-900" dir="auto">' + esc(tender.reference) + '</span>' +
+      '<span class="font-black text-slate-900" dir="ltr">' + esc(fmtRef(tender.reference)) + '</span>' +
       '<span class="text-[10px] font-bold px-2 py-0.5 rounded ' + (tender.kind === 'tender' ? 'bg-indigo-50 text-indigo-700' : 'bg-primary-50 text-primary-700') + '">' + kindName(tender.kind) + '</span>' +
       facultyChip() +
       '</div>' +
@@ -300,7 +300,7 @@
       stepBlock(1, t('step1')) +
       '<div class="mt-3">' +
       '<div class="flex items-center gap-2 flex-wrap">' +
-      '<span class="font-black text-slate-900 text-lg" dir="auto">' + esc(tender.reference) + '</span>' +
+      '<span class="font-black text-slate-900 text-lg" dir="ltr">' + esc(fmtRef(tender.reference)) + '</span>' +
       '<span class="text-[10px] font-bold px-2 py-0.5 rounded ' + (tender.kind === 'tender' ? 'bg-indigo-50 text-indigo-700' : 'bg-primary-50 text-primary-700') + '">' + kindName(tender.kind) + '</span>' +
       facultyChip() +
       '<span class="text-[10px] font-bold text-primary-700 bg-primary-50 border border-primary-200 rounded-full px-2 py-0.5">' + t('p_published') + '</span>' +
