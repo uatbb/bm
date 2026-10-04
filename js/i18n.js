@@ -96,6 +96,20 @@
       empty_opening_t: 'لا توجد استشارات بعد',
       empty_opening_s: 'تظهر هنا الاستشارات المنشورة حسب موعد فتح الأظرفة',
 
+      // تقويم الفتح العام
+      cal_title: '📅 تقويم مواعيد فتح الأظرفة',
+      cal_prev: '‹',
+      cal_next: '›',
+      cal_wd0: 'الأحد',
+      cal_wd1: 'الاثنين',
+      cal_wd2: 'الثلاثاء',
+      cal_wd3: 'الأربعاء',
+      cal_wd4: 'الخميس',
+      cal_wd5: 'الجمعة',
+      cal_wd6: 'السبت',
+      cal_opened: 'مفتوحة',
+      cal_today: 'اليوم',
+
       // تبويب الحسابات
       accounts_title: '👥 الحسابات',
       accounts_sub: 'كل الحسابات تحصل على صلاحيات كاملة (إنشاء، سجل التحميلات، فتح الأظرفة)',
@@ -382,6 +396,20 @@
       op_unknown: 'Inconnu',
       empty_opening_t: 'Aucun avis pour le moment',
       empty_opening_s: 'Les avis publiés apparaissent ici selon la date d’ouverture',
+
+      // Calendrier public
+      cal_title: '📅 Calendrier des ouvertures des plis',
+      cal_prev: '‹',
+      cal_next: '›',
+      cal_wd0: 'Dim',
+      cal_wd1: 'Lun',
+      cal_wd2: 'Mar',
+      cal_wd3: 'Mer',
+      cal_wd4: 'Jeu',
+      cal_wd5: 'Ven',
+      cal_wd6: 'Sam',
+      cal_opened: 'Ouvert',
+      cal_today: 'Aujourd’hui',
 
       accounts_title: '👥 Comptes',
       accounts_sub: 'Gestion des comptes du personnel et des commissions',
