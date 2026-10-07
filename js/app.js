@@ -40,7 +40,7 @@
   function renderNeutralNoQR() {
     $('public-root').innerHTML = neutral(
       '<div class="text-center py-4">' +
-      '<div class="text-5xl mb-3">📄</div>' +
+      '<div class="text-5xl mb-3"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.8 3.6H7.4A1.6 1.6 0 0 0 5.8 5.2v13.6a1.6 1.6 0 0 0 1.6 1.6h9.2a1.6 1.6 0 0 0 1.6-1.6V7.6z"/><path d="M13.8 3.6v4h4.4"/><path d="M8.6 12.6h6.8M8.6 16h4.4"/></svg></div>' +
       '<p class="text-sm text-slate-500 leading-relaxed">' + t('neutral_noqr') + '</p>' +
       '<p class="text-xs text-slate-400 mt-2 leading-relaxed">' + t('neutral_noqr_s') + '</p>' +
       '</div>'
@@ -50,7 +50,7 @@
   function renderNeutralNoDB() {
     $('public-root').innerHTML = neutral(
       '<div class="text-center py-4">' +
-      '<div class="text-5xl mb-3">⚙️</div>' +
+      '<div class="text-5xl mb-3"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.1"/><path d="M12 3.4v2.4M12 18.2v2.4M20.6 12h-2.4M5.8 12H3.4M18.1 5.9l-1.7 1.7M7.6 16.4l-1.7 1.7M18.1 18.1l-1.7-1.7M7.6 7.6 5.9 5.9"/></svg></div>' +
       '<p class="text-sm text-slate-500">' + t('neutral_nodb') + '</p>' +
       '</div>'
     );
@@ -66,7 +66,7 @@
         if (error) {
           console.error(error);
           root.innerHTML = neutral(
-            '<div class="text-center py-4"><div class="text-5xl mb-3">⚙️</div>' +
+            '<div class="text-center py-4"><div class="text-5xl mb-3"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.1"/><path d="M12 3.4v2.4M12 18.2v2.4M20.6 12h-2.4M5.8 12H3.4M18.1 5.9l-1.7 1.7M7.6 16.4l-1.7 1.7M18.1 18.1l-1.7-1.7M7.6 7.6 5.9 5.9"/></svg></div>' +
             '<p class="text-sm text-slate-500">' + t('neutral_nodb') + '</p></div>'
           );
           return;

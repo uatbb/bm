@@ -264,7 +264,7 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   font-weight: 800;
   white-space: nowrap;
 }
-.public-badge-tender { background: #eef2ff; color: #4338ca; }
+.public-badge-tender { background: #ecfdf5; color: #047857; }
 .public-badge-consultation,
 .public-badge-status { background: var(--primary-soft); color: var(--primary); }
 .public-badge-status { border: 1px solid #a7f3d0; }
@@ -373,3 +373,76 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   }
   header, nav, .no-print { display: none !important; }
 }
+
+
+/* ============================================================
+   Treeland (Deepin) — Frosted Glass theme (same as admin)
+   ============================================================ */
+:root {
+  --glass: rgba(255, 255, 255, 0.66);
+  --glass-strong: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-blur: blur(22px) saturate(180%);
+  --glass-shadow: 0 10px 34px rgba(6, 95, 70, 0.12);
+  --wallpaper:
+    radial-gradient(1100px 720px at 12% -10%, #a7f3d0 0%, rgba(167, 243, 208, 0) 62%),
+    radial-gradient(950px 650px at 92% 2%, #99f6e4 0%, rgba(153, 246, 228, 0) 58%),
+    radial-gradient(1000px 800px at 50% 112%, #6ee7b7 0%, rgba(110, 231, 183, 0) 60%),
+    linear-gradient(160deg, #ecfdf5 0%, #f0fdfa 48%, #e6fffb 100%);
+}
+
+body { background: var(--wallpaper) fixed; }
+
+.public-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+.public-topcard {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 45%, var(--secondary) 100%);
+  box-shadow: 0 16px 40px rgba(6, 95, 70, 0.3);
+}
+.inp {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(4, 120, 87, 0.16);
+}
+.public-btn-primary { box-shadow: 0 12px 26px rgba(5, 150, 105, 0.3); }
+.public-btn-secondary {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.public-pill { background: rgba(255, 255, 255, 0.2); }
+.public-banner {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-border);
+}
+
+
+/* ===== Treeland icons (Deepin line style) ===== */
+.ico {
+  display: inline-block;
+  width: 1.06em;
+  height: 1.06em;
+  margin-inline-end: 0.32em;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}
+.ico-dot-red, .ico-dot-blue, .ico-dot-white, .ico-dot-green {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  margin-inline-end: 0.4em;
+  vertical-align: -0.1em;
+}
+.ico-dot-red { background-color: #ef4444; }
+.ico-dot-blue { background-color: #3b82f6; }
+.ico-dot-white { background-color: #ffffff; border: 1px solid #cbd5e1; }
+.ico-dot-green { background-color: #22c55e; }
