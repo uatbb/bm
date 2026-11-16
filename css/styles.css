@@ -376,52 +376,128 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
 
 
 /* ============================================================
-   Treeland (Deepin) — Frosted Glass theme (same as admin)
+   Eco Home Vibes — داكن دافئ بنسق لوحة التحكم
+   خلفية غرفة مضببة + زجاج داكن + لهجات برتقالية
    ============================================================ */
 :root {
-  --glass: rgba(255, 255, 255, 0.66);
-  --glass-strong: rgba(255, 255, 255, 0.88);
-  --glass-border: rgba(255, 255, 255, 0.85);
-  --glass-blur: blur(22px) saturate(180%);
-  --glass-shadow: 0 10px 34px rgba(6, 95, 70, 0.12);
+  color-scheme: dark;
+  --glass: rgba(42, 44, 48, 0.60);
+  --glass-strong: rgba(36, 39, 43, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-blur: blur(30px) saturate(160%);
+  --glass-shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+  --spec: inset 0 1px 0 rgba(255, 255, 255, 0.20), inset 0 -1px 0 rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   --wallpaper:
-    radial-gradient(1100px 720px at 12% -10%, #a7f3d0 0%, rgba(167, 243, 208, 0) 62%),
-    radial-gradient(950px 650px at 92% 2%, #99f6e4 0%, rgba(153, 246, 228, 0) 58%),
-    radial-gradient(1000px 800px at 50% 112%, #6ee7b7 0%, rgba(110, 231, 183, 0) 60%),
-    linear-gradient(160deg, #ecfdf5 0%, #f0fdfa 48%, #e6fffb 100%);
+    radial-gradient(900px 700px at 6% 20%, rgba(217, 119, 6, 0.26) 0%, rgba(217, 119, 6, 0) 58%),
+    radial-gradient(1200px 850px at 90% -12%, rgba(168, 162, 158, 0.14) 0%, rgba(168, 162, 158, 0) 60%),
+    radial-gradient(1000px 720px at 78% 108%, rgba(249, 115, 22, 0.10) 0%, rgba(249, 115, 22, 0) 60%),
+    linear-gradient(155deg, #332719 0%, #241b12 42%, #16110c 78%, #100c08 100%);
+  /* الهوية البرتقالية الدافئة */
+  --primary: #c2410c;
+  --primary-dark: #9a3412;
+  --primary-soft: #fff7ed;
+  --secondary: #f97316;
+  --secondary-soft: #ffedd5;
+  --accent: #f97316;
+  --accent-dark: #ea580c;
+  --bg: #16110c;
+  --card: rgba(42, 44, 48, 0.60);
+  --border: rgba(255, 255, 255, 0.14);
+  --text: #eef1f4;
+  --muted: rgba(238, 241, 244, 0.65);
+  --shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 8px 26px rgba(0, 0, 0, 0.38);
 }
 
-body { background: var(--wallpaper) fixed; }
+body { background: var(--wallpaper) fixed; color: var(--text); }
 
 .public-card {
-  background: rgba(255, 255, 255, 0.72);
+  background: linear-gradient(135deg, rgba(58, 61, 66, 0.64) 0%, rgba(40, 43, 47, 0.58) 100%);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-color: var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--glass-shadow), var(--spec);
+  color: var(--text);
 }
 .public-topcard {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 45%, var(--secondary) 100%);
-  box-shadow: 0 16px 40px rgba(6, 95, 70, 0.3);
+  background: linear-gradient(135deg, #9a3412 0%, #f97316 60%, #ea580c 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), var(--spec);
 }
+.public-topcard .public-sub { color: #ffedd5; }
 .inp {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-color: rgba(4, 120, 87, 0.16);
-}
-.public-btn-primary { box-shadow: 0 12px 26px rgba(5, 150, 105, 0.3); }
-.public-btn-secondary {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: var(--text);
 }
-.public-pill { background: rgba(255, 255, 255, 0.2); }
+.inp::placeholder { color: rgba(238, 241, 244, 0.45); }
+.inp:focus { border-color: #f97316; box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.20); }
+.public-btn-primary { box-shadow: 0 12px 26px rgba(249, 115, 22, 0.30); }
+.btn-secondary,
+.public-btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+.btn-secondary:hover,
+.public-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(253, 186, 116, 0.5);
+  color: #ffffff;
+}
 .public-banner {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(42, 44, 48, 0.60);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-color: var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--spec);
+}
+
+/* النصوص والشارات داخل الألواح الداكنة */
+.lbl,
+.public-title,
+.public-ref,
+.public-step-label,
+.public-info-value { color: #ffffff; }
+.public-text,
+.public-note,
+.public-footer { color: rgba(238, 241, 244, 0.70); }
+.public-title-success { color: #fdba74; }
+.public-icon { background: rgba(255, 255, 255, 0.09); }
+.public-badge-tender { background: #fff7ed; color: #c2410c; }
+.public-badge-status { border-color: rgba(253, 186, 116, 0.5); }
+.public-step-num { box-shadow: 0 8px 18px rgba(249, 115, 22, 0.25); }
+.public-countdown-passed {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--muted);
+}
+.public-countdown-warning {
+  background: rgba(120, 53, 15, 0.40);
+  border-color: rgba(251, 191, 36, 0.4);
+  color: #fde68a;
+}
+.public-countdown-active .public-countdown-head { color: #ffedd5; }
+.public-info-box,
+.public-info-box-teal {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.public-info-label,
+.public-info-box-teal .public-info-label { color: rgba(253, 186, 116, 0.90); }
+.public-green-box-label { color: #ffedd5; }
+.spinner { border-color: rgba(255, 255, 255, 0.20); border-top-color: #f97316; }
+.kind-opt { background: rgba(255, 255, 255, 0.07); color: var(--text); }
+.kind-opt:hover { border-color: rgba(253, 186, 116, 0.5); background: rgba(255, 255, 255, 0.12); }
+.kind-opt:has(input:checked) { background: #f97316; border-color: #f97316; color: #ffffff; }
+
+/* الطباعة: بطاقة QR تبقى بيضاء */
+@media print {
+  body { background: #ffffff !important; color: #111827 !important; }
+  #qr-card, #qr-card * { color: #111827 !important; }
+  #qr-card { background: #ffffff !important; }
 }
 
 
@@ -446,3 +522,66 @@ body { background: var(--wallpaper) fixed; }
 .ico-dot-blue { background-color: #3b82f6; }
 .ico-dot-white { background-color: #ffffff; border: 1px solid #cbd5e1; }
 .ico-dot-green { background-color: #22c55e; }
+
+/* ============================================================
+   Tailwind CDN overrides — يُحقن بعد هذا الملف لذا نستخدم !important
+   ============================================================ */
+.bg-white {
+  background-color: rgba(42, 44, 48, 0.62) !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #eef1f4 !important;
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45) !important;
+}
+img.bg-white { background-color: #ffffff !important; box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35) !important; }
+
+[class*="from-emerald-"],
+[class*="from-teal-"],
+[class*="from-green-"] {
+  background-image: linear-gradient(135deg, #9a3412 0%, #f97316 60%, #ea580c 100%) !important;
+}
+[class*="text-emerald-"],
+[class*="text-teal-"],
+[class*="text-green-"] { color: #fdba74 !important; }
+
+.text-primary-100 { color: #ffedd5 !important; }
+.text-primary-700 { color: #fdba74 !important; }
+.text-slate-400,
+.text-slate-500,
+.text-slate-300,
+.text-slate-200 { color: rgba(238, 241, 244, 0.65) !important; }
+.text-slate-600,
+.text-slate-700,
+.text-slate-800,
+.text-slate-900 { color: #eef1f4 !important; }
+.placeholder-slate-400::placeholder { color: rgba(238, 241, 244, 0.45) !important; }
+.border-slate-200,
+.border-slate-300 { border-color: rgba(255, 255, 255, 0.14) !important; }
+.border-primary-200 { border-color: rgba(253, 186, 116, 0.4) !important; }
+.bg-slate-100 { background-color: rgba(255, 255, 255, 0.08) !important; }
+.bg-slate-800 { background-color: rgba(255, 255, 255, 0.12) !important; }
+.bg-primary-50 { background-color: rgba(249, 115, 22, 0.15) !important; }
+.bg-primary-700 { background-color: #c2410c !important; }
+.bg-amber-100 { background-color: rgba(120, 53, 15, 0.40) !important; }
+.text-amber-700 { color: #fcd34d !important; }
+.bg-red-50,
+.bg-red-100 { background-color: rgba(127, 29, 29, 0.35) !important; }
+.text-red-300,
+.text-red-700 { color: #fca5a5 !important; }
+.border-red-200 { border-color: rgba(248, 113, 113, 0.40) !important; }
+
+@media print {
+  body { background: #ffffff !important; color: #111827 !important; }
+  .bg-white,
+  img.bg-white,
+  .bg-slate-100,
+  .bg-slate-800,
+  .bg-primary-50,
+  .bg-primary-700 { background-color: #ffffff !important; color: #111827 !important; box-shadow: none !important; }
+  .text-slate-200, .text-slate-300, .text-slate-400, .text-slate-500,
+  .text-slate-600, .text-slate-700, .text-slate-800, .text-slate-900,
+  .text-primary-100, .text-primary-700 { color: #111827 !important; }
+  [class*="from-emerald-"], [class*="from-teal-"] { background-image: none !important; }
+}
